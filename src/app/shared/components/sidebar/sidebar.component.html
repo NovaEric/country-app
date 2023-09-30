@@ -1,0 +1,7 @@
+<h2>Countries</h2>
+<hr>
+<ul class="list-group">
+  <li *ngFor="let prop of props" [routerLink]="prop" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="list-group-item">
+    {{ prop.replace("-", " ").replace("countries/", "") | titlecase }}
+  </li>
+</ul>
